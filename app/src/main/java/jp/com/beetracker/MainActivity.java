@@ -12,10 +12,16 @@ import android.view.MenuItem;
 import java.io.Serializable;
 
 import io.orchestrate.client.Client;
+import io.orchestrate.client.ItemAlreadyPresentException;
 import io.orchestrate.client.KvMetadata;
+import io.orchestrate.client.KvObject;
 import io.orchestrate.client.KvResource;
 import io.orchestrate.client.OrchestrateClient;
 import io.orchestrate.client.OrchestrateRequest;
+import io.orchestrate.client.ResponseAdapter;
+
+import java.net.HttpURLConnection;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,14 +31,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Client client = OrchestrateClient.builder("e47bd7ea-e5a1-4b17-b81f-87dae65b1619").build();
-
-
-        Adam a = new Adam(2, "Adam");
-
-        KvResource kvResource = client.kv("users", "batman");
-        OrchestrateRequest<KvMetadata> orchestrateRequest =  kvResource.put(a);
-        orchestrateRequest.get();
 
     }
 
