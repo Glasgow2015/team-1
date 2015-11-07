@@ -7,6 +7,10 @@ import java.util.List;
  */
 public class Apiary {
 
+    private String name;
+    private String location;
+    private int year;
+    private List<Character> months;
     private List<Hive> hives;
 
 }
