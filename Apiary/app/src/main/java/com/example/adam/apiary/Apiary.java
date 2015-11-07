@@ -1,5 +1,6 @@
 package com.example.adam.apiary;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.Map;
 /**
  * Created by Adam on 07/11/2015.
  */
-public class Apiary {
+public class Apiary implements Serializable{
 
     private String name;
     private String location;
