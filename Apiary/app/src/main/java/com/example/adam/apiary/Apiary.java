@@ -56,4 +56,12 @@ public class Apiary implements Serializable{
     public List<Hive> getHives(){
         return new ArrayList<Hive>(hives);
     }
+
+    public List<Inspection> getAllInspections(){
+        List<Inspection> inspections = new ArrayList<Inspection>();
+        for(Hive h: hives){
+            inspections.addAll(h.getInspections());
+        }
+        return inspections;
+    }
 }
