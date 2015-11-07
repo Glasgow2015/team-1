@@ -49,7 +49,7 @@ public class Inspection implements Serializable {
         this.toolsCondition=toolsCondition;
     }
 
-    public int getNumber() {
+    public int getInspectionNumber() {
         return number;
     }
 
@@ -69,43 +69,43 @@ public class Inspection implements Serializable {
         return weather;
     }
 
-    public HiveState getState() {
+    public HiveState getHiveState() {
         return state;
     }
 
-    public Strength getStrength() {
+    public Strength getHiveStrength() {
         return strength;
     }
 
-    public Temper getTemper() {
+    public Temper getHiveTemper() {
         return temper;
     }
 
-    public boolean isQueen() {
+    public boolean queenCellsInBroodCombs() {
         return queen;
     }
 
-    public CombCondition getHoneyCondition() {
+    public CombCondition getHoneyStoresCondition() {
         return honeyCondition;
     }
 
-    public CombCondition getPollenCondition() {
+    public CombCondition getPollenStoresCondition() {
         return pollenCondition;
     }
 
-    public Pests getHiveBeetles() {
+    public Pests getHiveBeetleLevel() {
         return hiveBeetles;
     }
 
-    public Pests getMites() {
+    public Pests getMiteLevel() {
         return mites;
     }
 
-    public boolean isSafariAnts() {
+    public boolean safariAnts() {
         return safariAnts;
     }
 
-    public boolean isChalkBrood() {
+    public boolean chalkBrood() {
         return chalkBrood;
     }
 
@@ -113,7 +113,7 @@ public class Inspection implements Serializable {
         return hiveCondition;
     }
 
-    public GenCondition getToolsCondition() {
+    public GenCondition getClothingAndToolsCondition() {
         return toolsCondition;
     }
 }
