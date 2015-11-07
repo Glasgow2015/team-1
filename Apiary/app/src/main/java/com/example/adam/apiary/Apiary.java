@@ -14,7 +14,7 @@ public class Apiary {
     private String location;
     private int year;
     private List<Character> months;
-    private List<Boolean> answers;
+    private boolean answers[];
     private List<Hive> hives;
     private Map<String, Character> monthlookup;
 
@@ -23,7 +23,7 @@ public class Apiary {
         this.location = location;
         this.year = year;
         months = new ArrayList<Character>();
-        answers = new ArrayList<Boolean>();
+        answers = new boolean[17];
         hives = new ArrayList<Hive>();
         monthlookup = new HashMap<String,Character>();
         monthlookup.put("January", 'A');
@@ -67,4 +67,16 @@ public class Apiary {
 
     }
 
+    /**
+     * Sets the specified question number to the given answer
+     * @param questionNo the question number (zero indexed)
+     * @param answer The answer to the question
+     */
+    public void setQuestionNo(int questionNo, boolean answer){
+        answers[questionNo] = answer;
+    }
+
+    public void addHive(Hive hive) {
+        hives.add(hive);
+    }
 }
