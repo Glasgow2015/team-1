@@ -19,26 +19,14 @@ public class Apiary implements Serializable{
     private List<Hive> hives;
     private Map<String, Character> monthlookup;
 
-    private Apiary(String name, String location, int year){
+    private Apiary(String name, String location, int year, List<Character> months, boolean answers[]){
         this.name = name;
         this.location = location;
         this.year = year;
-        months = new ArrayList<Character>();
-        answers = new boolean[17];
+        this.months = months;
+        this.answers = answers;
         hives = new ArrayList<Hive>();
         monthlookup = new HashMap<String,Character>();
-        monthlookup.put("January", 'A');
-        monthlookup.put("February", 'B');
-        monthlookup.put("March", 'C');
-        monthlookup.put("April", 'D');
-        monthlookup.put("May", 'E');
-        monthlookup.put("June", 'F');
-        monthlookup.put("July", 'G');
-        monthlookup.put("August", 'H');
-        monthlookup.put("September", 'I');
-        monthlookup.put("October", 'J');
-        monthlookup.put("November", 'K');
-        monthlookup.put("December", 'L');
     }
 
     public String getName(){
@@ -53,31 +41,19 @@ public class Apiary implements Serializable{
         return year;
     }
 
-    public List<Character> getMonths(){
-         return new ArrayList<Character>(months);
+    public boolean[] getAnswers(){
+        return answers;
     }
 
-    /**
-     * Adds the specified month to the harvest months list
-     * @param month the month to be set (Capital required)
-     */
-    public void setHarvestMonth(String month){
-        if(monthlookup.get(month)!=null){
-            months.add(monthlookup.get(month));
-        }
-
-    }
-
-    /**
-     * Sets the specified question number to the given answer
-     * @param questionNo the question number (zero indexed)
-     * @param answer The answer to the question
-     */
-    public void setQuestionNo(int questionNo, boolean answer){
-        answers[questionNo] = answer;
+    public List<Character> getMonths() {
+        return new ArrayList<Character>(months);
     }
 
     public void addHive(Hive hive) {
         hives.add(hive);
+    }
+
+    public List<Hive> getHives(){
+        return new ArrayList<Hive>(hives);
     }
 }
