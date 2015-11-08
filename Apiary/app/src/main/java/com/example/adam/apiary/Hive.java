@@ -8,6 +8,7 @@ import java.util.List;
  */
 public class Hive{
 
+    private String apiaryName;
     private int hiveNo;
     private String location;
     private int dateday;
@@ -18,7 +19,8 @@ public class Hive{
     private List<Inspection> inspections;
     private List<Harvest> harvests;
 
-    public Hive(int hiveNo, String location, int dateday, int datemonth, int dateyear, HiveType hiveType, SunExposure sun){
+    public Hive(String apiaryNo, int hiveNo, String location, int dateday, int datemonth, int dateyear, HiveType hiveType, SunExposure sun){
+        this.apiaryName = apiaryName;
         this.hiveNo = hiveNo;
         this.location = location;
         this.dateday = dateday;
@@ -30,6 +32,9 @@ public class Hive{
         harvests = new ArrayList<Harvest>();
     }
 
+    public String getApiaryName(){
+        return apiaryName;
+    }
     public int getHiveNo(){
         return hiveNo;
     }

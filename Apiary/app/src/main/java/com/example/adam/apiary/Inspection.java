@@ -5,6 +5,7 @@ package com.example.adam.apiary;
  */
 public class Inspection {
 
+    private int hiveNo;
     private int number;
     private int dateday;
     private int datemonth;
@@ -24,11 +25,12 @@ public class Inspection {
     private GenCondition toolsCondition;
     private int noOfBees;
 
-    public Inspection(int number, int dateday, int datemonth, int dateyear, Weather weather,
+    public Inspection(int hiveNo, int number, int dateday, int datemonth, int dateyear, Weather weather,
                       HiveState state, Strength strength, Temper temper, boolean queen,
                       CombCondition honeyCondition, CombCondition pollenCondition, Pests hiveBeetles,
                       Pests mites, boolean safariAnts, boolean chalkBrood, GenCondition hiveCondition,
                       GenCondition toolsCondition, int noOfBees){
+        this.hiveNo = hiveNo;
         this.number = number;
         this.dateday=dateday;
         this.datemonth=datemonth;
@@ -47,6 +49,10 @@ public class Inspection {
         this.hiveCondition=hiveCondition;
         this.toolsCondition=toolsCondition;
         this.noOfBees = noOfBees;
+    }
+
+    public int getHiveNo() {
+        return hiveNo;
     }
 
     public int getInspectionNumber() {

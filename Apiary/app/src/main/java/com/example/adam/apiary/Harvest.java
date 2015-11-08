@@ -5,6 +5,7 @@ package com.example.adam.apiary;
  */
 public class Harvest {
 
+    private int hiveNo;
     private int dateday;
     private int datemonth;
     private int dateyear;
@@ -14,9 +15,10 @@ public class Harvest {
     private boolean smokerAvailable;
     private int noOfBuckets;
 
-    public Harvest(int dateday, int datemonth, int dateyear, int quantityOfCombs,
+    public Harvest(int hiveNo, int dateday, int datemonth, int dateyear, int quantityOfCombs,
                    boolean protectiveClothingForBeekeeper, boolean protectiveClothingForAllAssistants,
                    boolean smokerAvailable, int noOfBuckets) {
+        this.hiveNo = hiveNo;
         this.dateday = dateday;
         this.datemonth = datemonth;
         this.dateyear = dateyear;
@@ -25,6 +27,10 @@ public class Harvest {
         this.protectiveClothingForAllAssistants = protectiveClothingForAllAssistants;
         this.smokerAvailable = smokerAvailable;
         this.noOfBuckets = noOfBuckets;
+    }
+
+    public int getHiveNo() {
+        return hiveNo;
     }
 
     public int getDateday() {
