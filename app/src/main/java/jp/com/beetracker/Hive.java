@@ -1,5 +1,7 @@
-package com.example.adam.apiary;
 
+package jp.com.beetracker;
+
+import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,65 +12,86 @@ public class Hive{
 
     private String apiaryName;
     private int hiveNo;
-    private String location;
-    private int dateday;
-    private int datemonth;
-    private int dateyear;
+    private Double lng;
+    private Double lat;
+    private Date date;
     private HiveType hivetype;
     private SunExposure sun;
     private List<Inspection> inspections;
     private List<Harvest> harvests;
 
-    public Hive(String apiaryNo, int hiveNo, String location, int dateday, int datemonth, int dateyear, HiveType hiveType, SunExposure sun){
-        this.apiaryName = apiaryName;
-        this.hiveNo = hiveNo;
-        this.location = location;
-        this.dateday = dateday;
-        this.datemonth = datemonth;
-        this.dateyear = dateyear;
-        this.hivetype = hiveType;
-        this.sun = sun;
-        inspections = new ArrayList<Inspection>();
-        harvests = new ArrayList<Harvest>();
-    }
-
-    public String getApiaryName(){
+    public String getApiaryName() {
         return apiaryName;
     }
-    public int getHiveNo(){
+
+    public void setApiaryName(String apiaryName) {
+        this.apiaryName = apiaryName;
+    }
+
+    public Hive(SunExposure sun, HiveType hivetype, Date date, Double lat, Double lng, int hiveNo, String apiaryName) {
+        this.sun = sun;
+        this.hivetype = hivetype;
+        this.date = date;
+        this.lat = lat;
+        this.lng = lng;
+        this.hiveNo = hiveNo;
+        this.apiaryName = apiaryName;
+    }
+
+    public int getHiveNo() {
         return hiveNo;
     }
 
-    public String getLocation(){
-        return location;
+    public void setHiveNo(int hiveNo) {
+        this.hiveNo = hiveNo;
     }
 
-    public int getDateday(){
-        return dateday;
+    public Double getLng() {
+        return lng;
     }
 
-    public int getDatemonth(){
-        return datemonth;
+    public void setLng(Double lng) {
+        this.lng = lng;
     }
 
-    public int getDateyear(){
-        return dateyear;
+    public Double getLat() {
+        return lat;
     }
 
-    public HiveType getHivetype(){
+    public void setLat(Double lat) {
+        this.lat = lat;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public HiveType getHivetype() {
         return hivetype;
     }
 
-    public SunExposure getSunExposure(){
+    public void setHivetype(HiveType hivetype) {
+        this.hivetype = hivetype;
+    }
+
+    public SunExposure getSun() {
         return sun;
     }
 
-    public void addInspection(Inspection i){
-        inspections.add(i);
+    public void setSun(SunExposure sun) {
+        this.sun = sun;
     }
 
-    public void addHarvest(Harvest h){
-        harvests.add(h);
+    public void setInspections(List<Inspection> inspections) {
+        this.inspections = inspections;
+    }
+
+    public void setHarvests(List<Harvest> harvests) {
+        this.harvests = harvests;
     }
 
     public List<Inspection> getInspections(){

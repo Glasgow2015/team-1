@@ -1,4 +1,4 @@
-package com.example.adam.apiary;
+package jp.com.beetracker;
 
 /**
  * Created by Adam on 07/11/2015.

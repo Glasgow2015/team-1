@@ -1,4 +1,4 @@
-package com.example.adam.apiary;
+package jp.com.beetracker;
 
 import java.io.Serializable;
 
