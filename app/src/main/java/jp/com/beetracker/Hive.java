@@ -10,48 +10,71 @@ import java.util.List;
  */
 public class Hive{
 
-    private String apiaryName;
-    private int hiveNo;
-    private Double lng;
+    private String apname;
+    private String table;
+    private int number;
+    private Double log;
     private Double lat;
-    private Date date;
+    private Long date;
     private HiveType hivetype;
     private SunExposure sun;
     private List<Inspection> inspections;
     private List<Harvest> harvests;
 
     public String getApiaryName() {
-        return apiaryName;
+        return apname;
     }
 
     public void setApiaryName(String apiaryName) {
-        this.apiaryName = apiaryName;
+        this.apname = apiaryName;
     }
 
-    public Hive(SunExposure sun, HiveType hivetype, Date date, Double lat, Double lng, int hiveNo, String apiaryName) {
-        this.sun = sun;
-        this.hivetype = hivetype;
+    public Hive(Long date, Double lat, Double log, int hiveNo, String apiaryName) {
         this.date = date;
         this.lat = lat;
-        this.lng = lng;
-        this.hiveNo = hiveNo;
-        this.apiaryName = apiaryName;
+        this.log = log;
+        this.number = hiveNo;
+        this.apname = apiaryName;
+    }
+
+    public String getApname() {
+        return apname;
+    }
+
+    public void setApname(String apname) {
+        this.apname = apname;
+    }
+
+    public String getTable() {
+        return table;
+    }
+
+    public void setTable(String table) {
+        this.table = table;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     public int getHiveNo() {
-        return hiveNo;
+        return number;
     }
 
     public void setHiveNo(int hiveNo) {
-        this.hiveNo = hiveNo;
+        this.number = hiveNo;
     }
 
-    public Double getLng() {
-        return lng;
+    public Double getLog() {
+        return log;
     }
 
-    public void setLng(Double lng) {
-        this.lng = lng;
+    public void setLog(Double log) {
+        this.log = log;
     }
 
     public Double getLat() {
@@ -62,11 +85,11 @@ public class Hive{
         this.lat = lat;
     }
 
-    public Date getDate() {
+    public Long getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(Long date) {
         this.date = date;
     }
 

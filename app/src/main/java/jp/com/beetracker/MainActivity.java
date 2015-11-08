@@ -1,5 +1,6 @@
 package jp.com.beetracker;
 
+import android.content.Entity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -10,9 +11,11 @@ import com.google.gson.Gson;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -27,14 +30,17 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static DBHelper mydatabase;
+    public static int id;
 
     public static String POST(String url,String json) {
         InputStream inputStream = null;
         String result = "";
 
-        //String apiaryNo, int hiveNo, String location, int dateday, int datemonth, int dateyear, HiveType hiveType, SunExposure sun
-
         try {
+            HttpGet httpGet = new HttpGet();
+
+
             HttpClient httpclient = new DefaultHttpClient();
             HttpPost httpPost = new HttpPost(url);
             StringEntity se = new StringEntity(json);
@@ -43,13 +49,17 @@ public class MainActivity extends AppCompatActivity {
             httpPost.setHeader("Content-type", "application/json");
             HttpResponse httpResponse = httpclient.execute(httpPost);
             inputStream = httpResponse.getEntity().getContent();
-            if (inputStream != null)
+            if (inputStream != null) {
+                //Log.d("v", EntityUtils.toString(httpResponse.getEntity()));
                 result = convertInputStreamToString(inputStream);
-            else
+            }else {
                 result = "Did not work!";
+                mydatabase.insertJson(id++, json);
+            }
 
         } catch (Exception e) {
             Log.d("InputStream", e.getLocalizedMessage());
+            mydatabase.insertJson(id++,json);
         }
         return result;
     }
@@ -67,6 +77,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,16 +90,17 @@ public class MainActivity extends AppCompatActivity {
 
 
         //SunExposure sun, HiveType hivetype, Date date, Double lat, Double lng, int hiveNo, String apiaryName
-        Hive hive = new Hive(SunExposure.PARTIAL,HiveType.LANGSTRONG,new Date(),40.44,54.00,0,"John");
-        HiveWrapper hiveWrapper = new
+        Hive hive = new Hive(new Date().getTime(),40.44,54.00,0,"Apiary2");
+        //HiveWrapper hiveWrapper = new HiveWrapper("hives",hive);
+        hive.setTable("hives");
         Gson gson = new Gson();
         String json = gson.toJson(hive);
         int num = json.length();
 
 
 
-        String url = "http://ec2-54-74-114-193.eu-west-1.compute.amazonaws.com";
-        MainActivity.POST(url,json);
+        String url = "http://54.74.114.193:8000/ap/hives/";
+        MainActivity.POST(url,"{\"number\":\"1\",\"apname\":\"test\",\"log\":\"54.43\",\"lat\":\"23.4\",\"date\":\"45435435453\"}");
 //            // Defined URL  where to send data
 //            URL uri = new URL("http://ec2-54-74-114-193.eu-west-1.compute.amazonaws.com");
 //
