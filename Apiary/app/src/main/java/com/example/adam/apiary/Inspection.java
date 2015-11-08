@@ -24,12 +24,13 @@ public class Inspection implements Serializable {
     private boolean chalkBrood;
     private GenCondition hiveCondition;
     private GenCondition toolsCondition;
+    private int noOfBees;
 
     public Inspection(int number, int dateday, int datemonth, int dateyear, Weather weather,
                       HiveState state, Strength strength, Temper temper, boolean queen,
                       CombCondition honeyCondition, CombCondition pollenCondition, Pests hiveBeetles,
                       Pests mites, boolean safariAnts, boolean chalkBrood, GenCondition hiveCondition,
-                      GenCondition toolsCondition){
+                      GenCondition toolsCondition, int noOfBees){
         this.number = number;
         this.dateday=dateday;
         this.datemonth=datemonth;
@@ -47,6 +48,7 @@ public class Inspection implements Serializable {
         this.chalkBrood=chalkBrood;
         this.hiveCondition=hiveCondition;
         this.toolsCondition=toolsCondition;
+        this.noOfBees = noOfBees;
     }
 
     public int getInspectionNumber() {
