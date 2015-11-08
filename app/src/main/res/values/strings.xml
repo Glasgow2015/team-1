@@ -1,4 +1,77 @@
 <resources>
-    <string name="app_name">BeeTRacker</string>
+    <string name="app_name">BeeTracker</string>
     <string name="action_settings">Settings</string>
+
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="date">Date</string>
+
+    <array name="years">
+        <int>2015</int>
+        <int>2014</int>
+        <int>2013</int>
+        <int>2012</int>
+        <int>2011</int>
+        <int>2010</int>
+        <int>2009</int>
+        <int>2008</int>
+        <int>2007</int>
+        <int>2006</int>
+        <int>2005</int>
+        <int>2004</int>
+    </array>
+
+    <string name="apiary_view">Apiaries</string>
+
+
+    <string name="add_apiary">Add Apiary</string>
+    <string name="apiary_name">Apiary Name </string>
+    <string name="location">Location </string>
+    <drawable name="location_icon">location_icon.png</drawable>
+    <string name="harvesting">Harvesting Months </string>
+
+    <string name="january">January</string>
+    <string name="february">February</string>
+    <string name="march">March</string>
+    <string name="april">April</string>
+    <string name="may">May</string>
+    <string name="june">June</string>
+    <string name="july">July</string>
+    <string name="august">August</string>
+    <string name="september">September</string>
+    <string name="october">October</string>
+    <string name="november">November</string>
+    <string name="december">December</string>
+
+    <string name="year_selection">Year Started </string>
+
+    <string name="apq1">Is there a water source within 3km radius of the apiary?</string>
+    <string name="apq2">Is the vegetation within 3km miombo woodlands?</string>
+    <string name="apq3">Is the vegetation within 3km closed forest?</string>
+    <string name="apq4">Is the vegetation within 3km grassland?</string>
+    <string name="apq5">Is the vegetation within 3km forest plantation?</string>
+    <string name="apq6">Is the vegetation within 3km sisal plantation?</string>
+    <string name="apq7">Is the vegetation within 3km orchard?</string>
+    <string name="apq8">Is the vegetation within 3km mixed crops?</string>
+    <string name="apq9">Do farmers withing a 3km radius use pesticides?</string>
+
+
+    <string name="add_hive">Add Hive</string>
+    <string name="hive_num">Hive Number</string>
+    <string name="hive_date">Hive start date</string>
+    <string name="hive_type">Hive Type</string>
+    <string name="sun_exp">Sun Exposure</string>
+
+    <string name="ap1">Apiary 1</string>
+    <string name="ap2">Apiary 2</string>
+    <string name="ap3">Apiary 3</string>
+
+    <string name="hv1">Hive 1</string>
+    <string name="hv2">Hive 2</string>
+    <string name="hv3">Hive 1</string>
+
 </resources>

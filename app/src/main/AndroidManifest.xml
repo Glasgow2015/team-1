@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="jp.com.beetracker" >
 
-
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -15,12 +14,27 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:theme="@style/AppTheme.NoActionBar">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".AddApiary1"
+            android:label="@string/add_apiary" >
+        </activity>
+
+        <activity
+            android:name=".addHive1"
+            android:label="@string/add_hive" >
+        </activity>
+
+        <activity
+            android:name=".ApiaryView"
+            android:label="@string/apiary_view">
         </activity>
     </application>
 
