@@ -4,12 +4,13 @@ package jp.com.beetracker;
  * Created by ross on 08/11/2015.
  */
 public class HiveWrapper {
-    private Hive hive;
-    private String avName;
 
-    public HiveWrapper(Hive hive, String avName) {
+    private String table;
+    private Hive hive;
+
+    public HiveWrapper(String avName, Hive hive ) {
+        this.table = avName;
         this.hive = hive;
-        this.avName = avName;
     }
 
     public Hive getHive() {
@@ -21,10 +22,10 @@ public class HiveWrapper {
     }
 
     public String getAvName() {
-        return avName;
+        return table;
     }
 
     public void setAvName(String avName) {
-        this.avName = avName;
+        this.table = avName;
     }
 }
