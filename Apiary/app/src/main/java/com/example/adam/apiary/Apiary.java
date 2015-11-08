@@ -1,6 +1,5 @@
 package com.example.adam.apiary;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -9,7 +8,7 @@ import java.util.Map;
 /**
  * Created by Adam on 07/11/2015.
  */
-public class Apiary implements Serializable{
+public class Apiary{
 
     private String name;
     private String location;
@@ -19,7 +18,7 @@ public class Apiary implements Serializable{
     private List<Hive> hives;
     private Map<String, Character> monthlookup;
 
-    private Apiary(String name, String location, int year, List<Character> months, boolean answers[]){
+    public Apiary(String name, String location, int year, List<Character> months, boolean answers[]){
         this.name = name;
         this.location = location;
         this.year = year;

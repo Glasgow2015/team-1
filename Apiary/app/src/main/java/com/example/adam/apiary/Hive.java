@@ -1,13 +1,12 @@
 package com.example.adam.apiary;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Adam on 07/11/2015.
  */
-public class Hive implements Serializable{
+public class Hive{
 
     private int hiveNo;
     private String location;
