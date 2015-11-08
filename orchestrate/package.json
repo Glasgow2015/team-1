@@ -1,0 +1,52 @@
+{
+  "name": "orchestrate",
+  "description": "Orchestrate is a database service. It is a simple REST API that is optimized for queries. Orchestrate combines full-text search, graph, time-series, and key/value.",
+  "keywords": [
+    "full-text search",
+    "search",
+    "database",
+    "dbaas",
+    "graph",
+    "orchestrate",
+    "key",
+    "value",
+    "events",
+    "time-series"
+  ],
+  "homepage": "http://orchestrate.io/docs",
+  "repository": "orchestrate-io/orchestrate.js",
+  "bugs": {
+    "url": "https://github.com/orchestrate-io/orchestrate.js/issues",
+    "email": "support@orchestrate.io"
+  },
+  "license": "Apache-2.0",
+  "author": {
+    "email": "steve@bowery.io",
+    "url": "http://stevekaliski.com",
+    "name": "Steve Kaliski"
+  },
+  "version": "0.6.0",
+  "main": "index",
+  "tags": [
+    "orchestrate",
+    "driver"
+  ],
+  "dependencies": {
+    "request": "~2.62.0",
+    "kew": "~0.7.0",
+    "parse-link-header": "~0.4.1"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.4",
+    "expect.js": "0.3.1",
+    "jscoverage": "^0.6.0",
+    "mocha": "^2.3.2",
+    "mocha-lcov-reporter": "0.0.2"
+  },
+  "scripts": {
+    "test": "npm run cov && mocha -u tdd -t 5000",
+    "cov": "jscoverage lib lib-cov",
+    "report": "npm run cov && mocha -u tdd -R html-cov -t 5000 > coverage.html",
+    "coveralls": "npm run cov && mocha -u tdd -t 5000 -R mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js"
+  }
+}

@@ -1,0 +1,108 @@
+<?php
+echo '[{
+  "type":"HIVE",
+  "ap_name":"Apray1",
+  "index":1,
+  "location":{
+    "log":-5.269652, 
+    "lat":32.842012
+  },
+  "radius":2.0,
+  "date":{
+    "day":25,
+    "month":6,
+    "year":2011
+  }
+},
+{
+  "type":"HIVE",
+  "ap_name":"Apray1",
+  "index":2,
+  "location":{
+    "log":-5.269652, 
+    "lat":32.842012
+  },
+  "radius":2.0,
+  "date":{
+    "day":25,
+    "month":6,
+    "year":2011
+  }
+},
+{
+  "type":"HIVE",
+  "ap_name":"Apray1",
+  "index":3,
+  "location":{
+    "log":-5.269652, 
+    "lat":32.842012
+  },
+  "radius":2.0,
+  "date":{
+    "day":25,
+    "month":6,
+    "year":2011
+  }
+},
+{
+  "type":"HIVE",
+  "ap_name":"Apray1",
+  "index":4,
+  "location":{
+    "log":-5.269652, 
+    "lat":32.842012
+  },
+  "radius":2.0,
+  "date":{
+    "day":25,
+    "month":6,
+    "year":2011
+  }
+},
+{
+  "type":"HIVE",
+  "ap_name":"Apray1",
+  "index":5,
+  "location":{
+    "log":-5.269652, 
+    "lat":32.842012
+  },
+  "radius":2.0,
+  "date":{
+    "day":25,
+    "month":6,
+    "year":2011
+  }
+},
+{
+  "type":"HIVE",
+  "ap_name":"Apray1",
+  "index":6,
+  "location":{
+    "log":-5.269652, 
+    "lat":32.842012
+  },
+  "radius":2.0,
+  "date":{
+    "day":25,
+    "month":6,
+    "year":2011
+  }
+},
+{
+  "type":"HIVE",
+  "ap_name":"Apray1",
+  "index":7,
+  "location":{
+    "log":-5.269652, 
+    "lat":32.842012
+  },
+  "radius":2.0,
+  "date":{
+    "day":25,
+    "month":6,
+    "year":2011
+  }
+}]';
+
+?>
